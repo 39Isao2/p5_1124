@@ -1,6 +1,7 @@
 # 11/24 p5.jsでプログラミング入門！
 <br>
 <br>
+
 ## 講義内容
 
 
@@ -122,14 +123,13 @@ createCanvas(400, 400);
 
 <br>
 <br>
-
-**setup()の中には、プログラム実行時に一度だけ動作してほしい内容を記述します。**
+```
+setup()の中には、プログラム実行時に一度だけ動作してほしい内容を記述します。**
 canvasのサイズ設定や、最初の背景色など。
 
-<br>
-<br>
-**draw()の中には、プログラム実行時にずっと繰り返し動作してほしい内容を記述します。**
+draw()の中には、プログラム実行時にずっと繰り返し動作してほしい内容を記述します。**
 図形の描画や、座標の更新など。
+```
 <br>
 <br>
 
@@ -153,7 +153,7 @@ canvasのサイズ設定や、最初の背景色など。
 <br>
 <br>
 
-それぞれの色要素を0~255で設定します。
+それぞれの色要素を0~255で設定します。<br>
 赤・緑・青を全部MAX255に設定すると、白になります。
 
 色の設定（塗りつぶし）にはfill()という命令を使います。
@@ -183,7 +183,7 @@ canvasのサイズ設定や、最初の背景色など。
 
 
 
-RGB確認ツール
+RGB確認ツール<br>
 https://www.lab-nemoto.jp/236/
 
 もう一度（赤い円を描画する）
@@ -214,9 +214,9 @@ function draw() {
 
 # ３、変数を使ったアニメーション制作。
 
-簡易アニメーションを制作していきますが、**「変数」** という概念が必要になります。
+簡易アニメーションを制作していきますが、「変数」という概念が必要になります。
 <br><br>
-<img src="https://paper-attachments.dropbox.com/s_BC39598BCA31FBDCAABBED6C2FA116149B2BF1980745E917C14A95FE598AABEB_1635473368709_let.png" width="300px">
+<img src="https://paper-attachments.dropbox.com/s_BC39598BCA31FBDCAABBED6C2FA116149B2BF1980745E917C14A95FE598AABEB_1635473368709_let.png" width="600px">
 <br>
 
 ## 変数とは？
@@ -374,33 +374,39 @@ drawの最初にこちらを挿入
 <br>
 <br>
 ## アニメーションに条件分岐( if文 )を使ってみる。
+<br><br>
+現状、丸は画面をはみ出すと消えてしまいますが、元に戻るようにしてみましょう。<br>
+そこでif文を使用します。<br>
+if文は「もし〜だったらこういう処理をする」といったように使用する条件分岐に使う命令分です。<br>
 <br>
-現状、丸は画面をはみ出すと消えてしまいますが、元に戻るようにしてみましょう。
-そこでif文を使用します。
-if文は「もし〜だったらこういう処理をする」といったように使用する条件分岐に使う命令分です。
-<br>
-書き方↓
-
+書き方↓<br>
+```
 if (条件) {
     条件を満たしていれば(真であれば)この中の処理を実行する。
 }
-
+```
 今回は、丸が画面右端まで到達したら、また左端に戻したい。<br>
 （posXの座標が画面右端まで到達したらまた元の位置の戻す）<br>
 こちらをdrawの最後に記述してあげます。
 
+```
+// posXの値が400を超えたら再度0に戻す
+if(posX > 400){
+  posX = 0;
+}
+```
 
-      // posXの値が400を超えたら再度0に戻す
-      if(posX > 400){
-        posX = 0;
-      }
+<br>
 
-if ( posXが画面右端まで到達という条件を満たしていれば ) {<br>
-    posXを0に戻す。<br>
-}<br>
+```
+if ( posXが画面右端まで到達という条件を満たしていれば ) {
+    posXを0に戻す。
+}
+```
+
 <br>
-if-else文、true,falseの概念などもありますが今回は入門なのでここまで。<br>
-<br>
+if-else文、true,falseの概念などもありますが今回は入門なのでここまでにします。
+↓if文について<br>
 https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
 
 
@@ -441,14 +447,15 @@ https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
 
 # ４、簡易ランダムウォークを作ってみよう。
 
-**ランダムウォーク**（[英](https://ja.wikipedia.org/wiki/%E8%8B%B1%E8%AA%9E): random walk）は、<br>
-次に現れる位置が[確率](https://ja.wikipedia.org/wiki/%E7%A2%BA%E7%8E%87)的に<br>
-無作為（[ランダム](https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0)）に決定される運動である。
+ランダムウォーク( random walk）は、<br>
+次に現れる位置が確率的に<br>
+無作為(ランダム)に決定される運動である。Wikipediaより
 <br>
 <br>
 クリエイティブコーディングの入門によく使われる運動です。
 （この考え方をアレンジした作品にしたり、ウォーカーを増やしたコードにしたり）
 
+Wikipedia<br>
 https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF
 
 ![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636514481236_+2021-11-10+12.17.53.png)
@@ -457,16 +464,18 @@ https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A6%E3%8
 　
 randomという新しい命令が登場します。
 
-
+```
     // 0~255のランダムな数値を設定してくれます。
     random(255);
     
     // 10以上、30未満のランダムな数字。範囲指定ver
     random(10,30)
-    
+```
+
+<br>
 
 
-
+```
     let posX = 200;
     let posY = 200;
     
@@ -487,16 +496,19 @@ randomという新しい命令が登場します。
         posX += random(-5,5);
         posY += random(-5,5);
     }
+```
 
 
-改良すると面白いです。
+改良すると面白いです。<br>
 ↓改良した表現
 https://openprocessing.org/sketch/1269818/embed/
 
 
+<br><br>
 
 # ５、繰り返し処理(for文)を使って大量の図形を表示させてみよう。
 
+<br><br>
 for文という繰り返し処理を実行する命令を使ってダイナミックな表現を作ってみましょう。
 
 公式
@@ -516,29 +528,29 @@ for文という繰り返し処理を実行する命令を使ってダイナミ�
     for(){
     }
 
-２、現在何回繰り返したか把握する、カウント用変数を作ります。（for文の中でしか使いません）
-「i」という名前を使うことが多いです。インクリメントの「i」 説。
+２、現在何回繰り返したか把握する、カウント用変数を作ります。（for文の中でしか使いません）<br>
+「i」という名前を使うことが多いです。インクリメントの「i」 説。<br>
 (先ほどのposXと同じ定義方法です。）let i= 0;
 
     for(let i = 0; ){
     }
 
-３、何回繰り返すか設定します。(iの数をいくつまで数えるか)
-今回はi<10なので、iが10未満まで、0~9の10回実行します。
-（注: プログラミングの世界では、カウントを0から数えます！）
+３、何回繰り返すか設定します。(iの数をいくつまで数えるか)<br>
+今回はi<10なので、iが10未満まで、0~9の10回実行します。<br>
+（注: プログラミングの世界では、カウントを0から数えます！）<br>
 
     for(let i = 0; i<10; ){
       
     }
 
-４、カウント用変数（今回はiの値）を加算してあげます。
-i++というのはiが１ずつ増加するという意味です。
+４、カウント用変数（今回はiの値）を加算してあげます。<br>
+i++というのはiが１ずつ増加するという意味です。<br>
 
     for(let i = 0; i<10; i++){
     
     }
 
-ひとまず最初のうちは理解が難しいと思うので、、暗記してください。
+ひとまず最初のうちは理解が難しいと思うので、、暗記してください。<br>
 
     for(let i=0; i<繰り返したい回数; i++){
       // 実行内容
@@ -549,9 +561,10 @@ i++というのはiが１ずつ増加するという意味です。
 
 ## for文を使って、大量に円を表示させてみる
 
-今回は1度のみの描画が良いのでsetupの方に記述してください。
-drawは空白か消去で大丈夫です。
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510705850_+2021-11-10+11.09.29.png" width="400px">
+今回は1度のみの描画が良いのでsetupの方に記述してください。<br>
+drawは空白か消去で大丈夫です。<br>
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510705850_+2021-11-10+11.09.29.png" width="600px">
+<br>
 
 
     function setup(){
@@ -571,10 +584,10 @@ drawは空白か消去で大丈夫です。
     }
 
 
-200個にしてみましょう。
-30を200に変更するだけです。一気に結果が変わります。
-
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510711835_+2021-11-10+11.09.50.png" width="400px">
+200個にしてみましょう。<br>
+30を200に変更するだけです。一気に結果が変わります。<br>
+<br>
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510711835_+2021-11-10+11.09.50.png" width="600px">
 
 <br>
 <br>
@@ -603,12 +616,12 @@ if文との合わせ技で、前半100回を円に、後半100回を四角にし
     }
 
 
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png" width="600px">
+<br>
 
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png" width="600px">
 
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png" width="400px">
-
-
+<br>
 アレンジver 透明度もランダムに
 <br>
 
@@ -619,8 +632,8 @@ if文との合わせ技で、前半100回を円に、後半100回を四角にし
     
     
 
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510816492_+2021-11-10+11.14.42.png" width="400px">
-
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510816492_+2021-11-10+11.14.42.png" width="600px">
+<br>
 
 
 
@@ -633,16 +646,16 @@ if文との合わせ技で、前半100回を円に、後半100回を四角にし
 
 透明度もランダムに！（低めに絞る）
 <br>
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510911704_+2021-11-10+11.15.03.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510911704_+2021-11-10+11.15.03.png" width="600px">
 
 noStoke()で枠線なしに！
 <br>
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636511050087_+2021-11-10+11.23.35.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636511050087_+2021-11-10+11.23.35.png" width="600px">
 
 
 
 
-
+<br><br>
 
 # ６、今後のプログラミング勉強方法について
 
@@ -693,9 +706,6 @@ VRやARを作りたい
 - デザインを極める 笑
 
 
-プログラミング、クリエイティブコーディングに興味を持つきっかけになれば幸いです。
+プログラミング、クリエイティブコーディングに興味を持つきっかけになれば幸いです。<br>
 本日はありがとうございました！
 
-
-
-# p5_1124
