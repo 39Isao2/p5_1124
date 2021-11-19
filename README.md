@@ -1,6 +1,6 @@
 # 11/24 p5.jsでプログラミング入門！
 
-# 講義内容
+## 講義内容
 
 
 - １、クリエイティブコーディング、p5.jsとは？ 10分
@@ -10,7 +10,7 @@
 - ５、繰り返し処理(for文)を使って大量の図形を表示させてみよう。30分
 - ６、今後のプログラミング勉強方法について 10分
 
-※ 小さな画像はクリックで拡大できます。
+
 
 # １、p5.js、クリエイティブコーディングとは？
 
@@ -41,10 +41,10 @@ p5.jsで制作したスケッチを投稿できるSNSのようなWebサービス
 今回はブラウザで動作するコードベースの**「p5.js」**といった環境を使用してプログラミングを学んでいきますが、コードを書かない「ビジュアルプログラミング」といった種類の環境も増えています。
 https://p5js.jp/
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501396688_S28dlBBm.png)
 
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501396688_S28dlBBm.png" width="600px">
 
-
+<br>
 ビジュアルプログラミング例: **TouchDesigne**r 
 
 ノードベースのビジュアルプログラミング環境。もともとはVJツールだけど、センサー連携などが容易で、インタラクティブ作品やメディアアートに使用されています。
@@ -52,10 +52,9 @@ https://p5js.jp/
 
 https://derivative.ca/
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501745894_+2021-11-10+8.46.49.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501745894_+2021-11-10+8.46.49.png" width="600px">
 
-
-
+<br>
 
 
 # ２、基礎編の復習、図形の描画。
@@ -65,7 +64,10 @@ p5.jsエディターはこちら。（アカウントを作らないと保存で
 https://editor.p5js.org/
 
 ## p5入門!   circleを一つ描く
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501958462_S28dlBBm.png)
+
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501958462_S28dlBBm.png" width="600px">
+
+```
 
     function setup() {
       // 横400px 縦400pxのキャンバスを作成する
@@ -82,14 +84,17 @@ https://editor.p5js.org/
       // x座標200、y座標200を中心に直径100pxの円を描く
       circle(200,200,100);
     }
+ ```
 
 解説
 
 **createCanvas()**
 キャンバスのサイズを設定します。
 
-      // 横400px 縦400pxのキャンバスを作成する
-      createCanvas(400, 400);
+```
+// 横400px 縦400pxのキャンバスを作成する
+createCanvas(400, 400);
+```
 
 
 ## 座標について
@@ -113,9 +118,8 @@ canvasのサイズ設定や、最初の背景色など。
 **draw()の中には、プログラム実行時にずっと繰り返し動作してほしい内容を記述します。**
 図形の描画や、座標の更新など。
 
-![](https://paper-attachments.dropbox.com/s_8DDB86368F8E5C60F23520D80858F8BF24655DC9E5F0DFEC033D15D4C5B053EC_1636502258873_+2021-11-10+8.54.10.png)
-
-
+<img src="https://paper-attachments.dropbox.com/s_8DDB86368F8E5C60F23520D80858F8BF24655DC9E5F0DFEC033D15D4C5B053EC_1636502258873_+2021-11-10+8.54.10.png" width="600px">
+<br>
 ↑アニメーション基礎を学びながら後ほど詳しく。
 
 
@@ -127,15 +131,11 @@ canvasのサイズ設定や、最初の背景色など。
 
 **今回はRGBモード！（加法混色）**
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636502984731_rgb-cmyk1.jpg)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636502984731_rgb-cmyk1.jpg" width="400px">
 
 
-
-
-
-
-
-
+<br>
+<br>
 
 それぞれの色要素を0~255で設定します。
 赤・緑・青を全部MAX255に設定すると、白になります。
@@ -153,21 +153,16 @@ canvasのサイズ設定や、最初の背景色など。
     
     // 緑
     fill(0,255,0);
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png)
+    
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.pn" width="400px">
+<img src="(https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png" width="400px">
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.png)
-
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png)
-
-![黄色の場所。](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503652454_+2021-11-10+9.16.06.png)
-
-
-
-
-
-
-
-
+<br>
+<br>
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503652454_+2021-11-10+9.16.06.png" width="400px">
+<br>
+<br>
 
 
 
@@ -176,7 +171,7 @@ RGB確認ツール
 https://www.lab-nemoto.jp/236/
 
 もう一度（赤い円を描画する）
-
+```
     function setup() {
       // 横400px 縦400pxのキャンバスを作成する
       createCanvas(400, 400);
@@ -193,6 +188,8 @@ https://www.lab-nemoto.jp/236/
       circle(200,200,100);
     }
 
+```
+
 p5.js リファレンス
 https://p5js.org/reference/
 
@@ -201,10 +198,9 @@ https://p5js.org/reference/
 # ３、変数を使ったアニメーション制作。
 
 簡易アニメーションを制作していきますが、「**変数」**という概念が必要になります。
-
-![](https://paper-attachments.dropbox.com/s_BC39598BCA31FBDCAABBED6C2FA116149B2BF1980745E917C14A95FE598AABEB_1635473368709_let.png)
-
-
+<br>
+<img src="https://paper-attachments.dropbox.com/s_BC39598BCA31FBDCAABBED6C2FA116149B2BF1980745E917C14A95FE598AABEB_1635473368709_let.png" width="300px">
+<br>
 
 ## 変数とは？
 
@@ -215,21 +211,9 @@ C言語やJavaScript、ほぼ全てのプログラム言語で利用可能な重
 let → 変数を使います！という宣言（新しいフォルダを作る）
 posX → 変数の名前を決める。posXでもpositionXでもbananaでも何でもOK（フォルダ名を決める）
 =20 → 値を格納する（代入する）。（フォルダにデータを入れる）
-
-
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636505846856_let.png)
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636505846856_let.png" width="300px">
+<br>
 
 
 
