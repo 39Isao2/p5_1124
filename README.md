@@ -1,2 +1,724 @@
+# 11/24 p5.jsでプログラミング入門！
+
+# 講義内容
+
+
+- １、クリエイティブコーディング、p5.jsとは？ 10分
+- ２、基礎編の復習。図形の描画。20分
+- ３、変数を使ったアニメーション制作。30分
+- ４、「ランダムウォーク」を作ってみよう。20分
+- ５、繰り返し処理(for文)を使って大量の図形を表示させてみよう。30分
+- ６、今後のプログラミング勉強方法について 10分
+
+※ 小さな画像はクリックで拡大できます。
+
+# １、p5.js、クリエイティブコーディングとは？
+
+クリエイティブ・コーディングとは，
+**機能的ではなく表現力**のあるものを創造することを目指すコンピュータプログラミングの一種です。
+(wikipediaより)
+
+https://en.wikipedia.org/wiki/Creative_coding
+
+
+計算やシステム制作ではなく、
+ビジュアルを制作しながらプログラミングを学べるので、そのような種類に抵抗がある方も、楽しんで入門できるかと思います。（個人的にはシステム制作などもとても楽しいし、クリエイティブだと思っております。）
+
+
+https://blog.creative-plus.net/archives/8171
+
+
+
+# [OpenProcessing](https://openprocessing.org/)
+
+p5.jsで制作したスケッチを投稿できるSNSのようなWebサービス。
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501277130_fJwGow8d.png)
+
+
+
+今回はブラウザで動作するコードベースの**「p5.js」**といった環境を使用してプログラミングを学んでいきますが、コードを書かない「ビジュアルプログラミング」といった種類の環境も増えています。
+https://p5js.jp/
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501396688_S28dlBBm.png)
+
+
+
+ビジュアルプログラミング例: **TouchDesigne**r 
+
+ノードベースのビジュアルプログラミング環境。もともとはVJツールだけど、センサー連携などが容易で、インタラクティブ作品やメディアアートに使用されています。
+（あまり詳しくありませんが、、、。）
+
+https://derivative.ca/
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501745894_+2021-11-10+8.46.49.png)
+
+
+
+
+
+# ２、基礎編の復習、図形の描画。
+
+ではp5の入門しましょう！
+p5.jsエディターはこちら。（アカウントを作らないと保存できません。）
+https://editor.p5js.org/
+
+## p5入門!   circleを一つ描く
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501958462_S28dlBBm.png)
+
+    function setup() {
+      // 横400px 縦400pxのキャンバスを作成する
+      createCanvas(400, 400);
+      // 背景色を黒にする
+      background(0,0,0);
+    }
+    
+    function draw() { 
+     
+      // 赤い色を設定
+      fill(255,0,0);
+    
+      // x座標200、y座標200を中心に直径100pxの円を描く
+      circle(200,200,100);
+    }
+
+解説
+
+**createCanvas()**
+キャンバスのサイズを設定します。
+
+      // 横400px 縦400pxのキャンバスを作成する
+      createCanvas(400, 400);
+
+
+## 座標について
+
+左右をx座標、上下をy座標と呼びます。
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636504135270_486.1.jpg)
+
+
+画面はpxという単位のマス目で構成されています。
+ファミコンの初代マリオやドラゴンクエストのドットのイメージです。
+
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636504147543_486.2.jpg)
+
+
+
+**setup()の中には、プログラム実行時に一度だけ動作してほしい内容を記述します。**
+canvasのサイズ設定や、最初の背景色など。
+
+**draw()の中には、プログラム実行時にずっと繰り返し動作してほしい内容を記述します。**
+図形の描画や、座標の更新など。
+
+![](https://paper-attachments.dropbox.com/s_8DDB86368F8E5C60F23520D80858F8BF24655DC9E5F0DFEC033D15D4C5B053EC_1636502258873_+2021-11-10+8.54.10.png)
+
+
+↑アニメーション基礎を学びながら後ほど詳しく。
+
+
+## 色の設定方法
+
+パソコンのソフトウェアでは、RGBとCMYKという色指定用語が出てきます。
+液晶ディスプレイやデジタルカメラ、Web素材で RGBモード。
+プリンターや印刷物などで CMYKモードを使います。
+
+**今回はRGBモード！（加法混色）**
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636502984731_rgb-cmyk1.jpg)
+
+
+
+
+
+
+
+
+
+それぞれの色要素を0~255で設定します。
+赤・緑・青を全部MAX255に設定すると、白になります。
+
+色の設定（塗りつぶし）にはfill()という命令を使います。
+
+    
+    fill(R, G, B); // fill(赤の値, 緑の値, 青の値);
+    
+    // 赤
+    fill(255,0,0);   // R 255、G 0、B 0 なので
+    
+    // 青
+    fill(0,0,255);
+    
+    // 緑
+    fill(0,255,0);
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png)
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.png)
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png)
+
+![黄色の場所。](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503652454_+2021-11-10+9.16.06.png)
+
+
+
+
+
+
+
+
+
+
+
+
+RGB確認ツール
+https://www.lab-nemoto.jp/236/
+
+もう一度（赤い円を描画する）
+
+    function setup() {
+      // 横400px 縦400pxのキャンバスを作成する
+      createCanvas(400, 400);
+      // 背景色を黒にする
+      background(0,0,0);
+    }
+    
+    function draw() { 
+     
+      // 赤い色を設定
+      fill(255,0,0);
+    
+      // x座標200、y座標200を中心に直径100pxの円を描く
+      circle(200,200,100);
+    }
+
+p5.js リファレンス
+https://p5js.org/reference/
+
+
+
+# ３、変数を使ったアニメーション制作。
+
+簡易アニメーションを制作していきますが、「**変数」**という概念が必要になります。
+
+![](https://paper-attachments.dropbox.com/s_BC39598BCA31FBDCAABBED6C2FA116149B2BF1980745E917C14A95FE598AABEB_1635473368709_let.png)
+
+
+
+## 変数とは？
+
+その名の通り、変化する数。ですが、数字以外の「文字」やデータでも何でも入ります。
+ひとまず「pcのフォルダにデータを入れる、上書き保存も可能」というような理解でOKです。
+C言語やJavaScript、ほぼ全てのプログラム言語で利用可能な重要な概念です。
+
+let → 変数を使います！という宣言（新しいフォルダを作る）
+posX → 変数の名前を決める。posXでもpositionXでもbananaでも何でもOK（フォルダ名を決める）
+=20 → 値を格納する（代入する）。（フォルダにデータを入れる）
+
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636505846856_let.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+先ほどのcircleに変数を使ってみる。
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636506375311_+2021-11-10+10.03.16.png)
+
+
+
+    // 変数の宣言
+    // let 変数名 = 値;
+    
+    let posX = 200;
+    
+    function setup(){
+      createCanvas(400,400);
+      // 背景を白に
+      background(255,255,255);
+    }
+    
+    function draw(){
+      // 黄色に
+      fill(255,255,0);
+      
+      // posXの場所に円描く
+      circle(posX,200,50);
+    
+    }
+
+
+
+
+## アニメーションを作ってみる。
+
+とりあえず書いてみる。
+
+
+    // 変数の宣言
+    // let 変数名 = 値;
+    
+    let posX = 200;
+    
+    function setup(){
+      createCanvas(400,400);
+      // 背景を白に
+      background(255,255,255);
+    }
+    
+    function draw(){
+      // 黄色に
+      fill(255,255,0);
+      
+      // posXの場所に円描く
+      circle(posX,200,50);
+      
+      posX = posX+1;
+    
+    }
+
+
+posXの座標を毎フレーム更新することによってアニメーションが制作できます。
+draw()の中に書くので1秒間に60回、posXが１ずつ増加します。
+
+
+    posX = posX+1;
+    // posXを1ずつ増加させます。先ほどの上書きの考え方。
+
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507162619_draw.png)
+
+
+
+
+
+
+
+
+
+
+結果
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507244150_+2021-11-10+10.17.24.png)
+
+
+
+
+
+
+
+
+
+
+
+しかしこのままでは前のフレームの絵が残ってしまう、、、。
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507486696_+2021-11-10+10.11.28.png)
+
+
+解決策、background()で毎回塗りつぶし、直前の絵をリセットする！
+**高速パラパラ漫画の考え方。**
+黄色い丸　→ 真っ白 → 少し移動した黄色い丸 →　真っ白。
+
+![イメージ。毎回真っ白な画像で塗りつぶす。](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636508259184_parapara.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+drawの最初にこちらを挿入
+
+    // 白で塗りつぶす
+    background(255,255,255);
+
+完成コード
+
+
+    // 変数の宣言
+    // let 変数名 = 値;
+    
+    let posX = 200;
+    
+    function setup(){
+      createCanvas(400,400);
+      // 背景を白に
+      background(255,255,255);
+    }
+    
+    function draw(){
+      
+      // 白で塗りつぶす
+      background(255,255,255);
+      
+      // 黄色に
+      fill(255,255,0);
+      
+      // posXの場所に円描く
+      circle(posX,200,50);
+      
+      // 座標の更新
+      posX = posX+1;
+    }
+
+
+## アニメーションに条件分岐( if文 )を使ってみる。
+
+現状、丸は画面をはみ出すと消えてしまいますが、元に戻るようにしてみましょう。
+そこでif文を使用します。
+if文は「もし〜だったらこういう処理をする」といったように使用する条件分岐に使う命令分です。
+
+書き方↓
+
+if (条件) {
+    条件を満たしていれば(真であれば)この中の処理を実行する。
+}
+
+今回は、丸が画面右端まで到達したら、また左端に戻したい。
+（posXの座標が画面右端まで到達したらまた元の位置の戻す）
+こちらをdrawの最後に記述してあげます。
+
+
+      // posXの値が400を超えたら再度0に戻す
+      if(posX > 400){
+        posX = 0;
+      }
+
+if ( posXが画面右端まで到達という条件を満たしていれば ) {
+    posXを0に戻す。
+}
+
+if-else文、true,falseの概念などもありますが今回は入門なのでここまで。
+
+https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
+
+
+
+    // 変数の宣言
+    // let 変数名 = 値;
+    
+    let posX = 100;
+    
+    function setup(){
+      createCanvas(400,400);
+      background(255,255,255);
+    }
+    
+    function draw(){
+      
+      // 白で再度塗りつぶす
+      background(255,255,255);
+      
+      // 青色に
+      fill(0,0,255);
+      
+      // posXの場所に円描く
+      circle(posX,200,50);
+      
+      // posXの値の更新
+      posX = posX + 1;
+      
+      // posXの値が400を超えたら再度0に戻す
+      if(posX > 400){
+        posX = 0;
+      }
+      
+    }
+    
+
+
+
+# ４、簡易ランダムウォークを作ってみよう。
+
+**ランダムウォーク**（[英](https://ja.wikipedia.org/wiki/%E8%8B%B1%E8%AA%9E): random walk）は、次に現れる位置が[確率](https://ja.wikipedia.org/wiki/%E7%A2%BA%E7%8E%87)的に無作為（[ランダム](https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0)）に決定される運動である。
+クリエイティブコーディングの入門によく使われる運動です。
+（この考え方をアレンジした作品にしたり、ウォーカーを増やしたコードにしたり）
+
+https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636514481236_+2021-11-10+12.17.53.png)
+
+
+　
+randomという新しい命令が登場します。
+
+
+    // 0~255のランダムな数値を設定してくれます。
+    random(255);
+    
+    // 10以上、30未満のランダムな数字。範囲指定ver
+    random(10,30)
+    
+
+
+
+    let posX = 200;
+    let posY = 200;
+    
+    function setup() {
+        createCanvas(500, 500);
+        background(255,255,255);
+    }
+    
+    function draw() {
+        
+        // 図形の枠線をなしに
+        noStroke();
+        fill(0,0,0,120);
+    
+        circle(posX,posY,5);
+    
+        // -5以上、5未満のランダムな数字を足してあげる
+        posX += random(-5,5);
+        posY += random(-5,5);
+    }
+
+
+改良すると面白いです。
+
+https://openprocessing.org/sketch/1269818/embed/
+
+
+
+# ５、繰り返し処理(for文)を使って大量の図形を表示させてみよう。
+
+for文という繰り返し処理を実行する命令を使ってダイナミックな表現を作ってみましょう。
+
+公式
+
+    for ([初期化式]; [条件式]; [加算式])
+
+できるだけ優しい言葉で説明します。（最初は暗記がおすすめです。）
+
+
+    // 10回繰り返す式
+    for(let i=0; i<10; i++){
+      // ここに実行する処理
+    }
+
+１、まずはforという()で括ります。
+
+    for(){
+    }
+
+２、現在何回繰り返したか把握する、カウント用変数を作ります。（for文の中でしか使いません）
+「i」という名前を使うことが多いです。インクリメントの「i」 説。
+(先ほどのposXと同じ定義方法です。）let i= 0;
+
+    for(let i = 0; ){
+    }
+
+３、何回繰り返すか設定します。(iの数をいくつまで数えるか)
+今回はi<10なので、iが10未満まで、0~9の10回実行します。
+（注: プログラミングの世界では、カウントを0から数えます！）
+
+    for(let i = 0; i<10; ){
+      
+    }
+
+４、カウント用変数（今回はiの値）を加算してあげます。
+i++というのはiが１ずつ増加するという意味です。
+
+    for(let i = 0; i<10; i++){
+    
+    }
+
+ひとまず最初のうちは理解が難しいと思うので、、暗記してください。
+
+    for(let i=0; i<繰り返したい回数; i++){
+      // 実行内容
+    }
+
+
+
+
+## for文を使って、大量に円を表示させてみる
+
+今回は1度のみの描画が良いのでsetupの方に記述してください。
+drawは空白か消去で大丈夫です。
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510705850_+2021-11-10+11.09.29.png)
+
+
+
+    function setup(){
+      
+      createCanvas(500,500);
+      
+      // 30回繰り返す
+      for(let i=0; i<30; i++){
+        
+        // randomな色に設定
+        fill(random(255),random(255),random(255));
+        
+        // randomな位置とサイズを設定
+        circle(random(500),random(500),random(50)); 
+      }
+      
+    }
+
+
+200個にしてみましょう。
+30を200に変更するだけです。一気に結果が変わります。
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510711835_+2021-11-10+11.09.50.png)
+
+
+
+if文との合わせ技で、前半100回を円に、後半100回を四角にしてみましょう。
+
+    
+    function setup(){
+    
+      createCanvas(500,500);
+      
+      // 200回繰り返す
+      for(let i=0; i<200; i++){
+        // randomな色に設定
+        fill(random(255),random(255),random(255));
+        
+        if(i<100){
+          // 前半100回は円を描画
+          circle(random(500),random(500),random(50));
+        }
+        else{
+          // 後半100回は四角を描画
+          rect(random(500),random(500),random(50))
+        }
+      }
+    
+    }
+
+
+![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png)
+
+
+
+
+アレンジver
+
+
+    fill(R,G,B,A);
+    fill(random(255),random(255),random(255),random(255));
+    // fillの4番目には透明度が設定可能 0~MAX244
+![透明度もランダムに！](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510816492_+2021-11-10+11.14.42.png)
+
+
+
+
+
+
+
+
+
+    fill(random(255),random(255),random(255),random(40));
+![透明度もランダムに！（低めに絞る）](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510911704_+2021-11-10+11.15.03.png)
+
+
+
+
+
+![noStoke()で枠線なしに！](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636511050087_+2021-11-10+11.23.35.png)
+
+
+
+
+
+
+# ６、今後のプログラミング勉強方法について
+
+自分のモチベーションの上がる環境、作りたい物に適した言語やツールを選ぶと良いと思います。
+しかし、納得いく思った通りの物が作れるようになるまでは、数年かかると思います。
+（終わりがないかも、、）
+一度色々な環境に触れてみても良いかもしれませんが、個人的には自分がコレ！と決めたツールや言語としばらくじっくり向き合うと良いと思います。
+その言語やツールで覚えたプログラミング手法や考え方は、必ず別のツールでも生かせます。変数やif文などは全ての言語で出てくるし、コードはコピペできないけど、考え方はコピペできます。
+興味を持ち続けることが大切だと思います。
+例を挙げます。
+
+
+Webサイトを作りたい
+
+- HTMLとCSS(正確にはマークアップ言語)
+- JavaScript
+
+Webサービスを作りたい
+
+- HTMLとCSS(正確にはマークアップ言語)
+- JavaScript(フレームークも)
+- PHPなどサーバーサイドの言語
+
+インタラクティブ作品、VJをやりたい
+
+- タッチデザイナー
+- Unity
+
+VRやARを作りたい
+
+- Unity
+
+スマホゲームが作りたい
+
+- Unity
+- Swift
+
+子供と楽しくプログラミングしたい
+
+- scratch
+- scratch jr
+
+
+コードを書くのが苦手だった、、、
+
+- タッチデザイナー
+- scratch
+- デザインを極める 笑
+
+
+プログラミング、クリエイティブコーディングに興味を持つきっかけになれば幸いです。
+本日はありがとうございました！
+
+# おまけ（勉強に役立つサイトなど）
+
+
+
 # p5_1124
-p5.jsでプログラミング/クリエイティブコーディング入門!
