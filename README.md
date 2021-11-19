@@ -33,9 +33,10 @@ https://blog.creative-plus.net/archives/8171
 
 p5.jsで制作したスケッチを投稿できるSNSのようなWebサービス。
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501277130_fJwGow8d.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501277130_fJwGow8d.png" width="600px">
 
-
+<br>
+<br>
 
 今回はブラウザで動作するコードベースの**「p5.js」**といった環境を使用してプログラミングを学んでいきますが、コードを書かない「ビジュアルプログラミング」といった種類の環境も増えています。
 https://p5js.jp/
