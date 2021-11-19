@@ -1,5 +1,6 @@
 # 11/24 p5.jsでプログラミング入門！
-
+<br>
+<br>
 ## 講義内容
 
 
@@ -10,7 +11,8 @@
 - ５、繰り返し処理(for文)を使って大量の図形を表示させてみよう。30分
 - ６、今後のプログラミング勉強方法について 10分
 
-
+<br>
+<br>
 
 # １、p5.js、クリエイティブコーディングとは？
 
@@ -27,7 +29,8 @@ https://en.wikipedia.org/wiki/Creative_coding
 
 https://blog.creative-plus.net/archives/8171
 
-
+<br>
+<br>
 
 # [OpenProcessing](https://openprocessing.org/)
 
@@ -55,13 +58,16 @@ https://derivative.ca/
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501745894_+2021-11-10+8.46.49.png" width="600px">
 
 <br>
-
+<br>
 
 # ２、基礎編の復習、図形の描画。
 
 ではp5の入門しましょう！
 p5.jsエディターはこちら。（アカウントを作らないと保存できません。）
 https://editor.p5js.org/
+
+<br>
+<br>
 
 ## p5入門!   circleを一つ描く
 
@@ -121,7 +127,8 @@ canvasのサイズ設定や、最初の背景色など。
 <img src="https://paper-attachments.dropbox.com/s_8DDB86368F8E5C60F23520D80858F8BF24655DC9E5F0DFEC033D15D4C5B053EC_1636502258873_+2021-11-10+8.54.10.png" width="600px">
 <br>
 ↑アニメーション基礎を学びながら後ほど詳しく。
-
+<br>
+<br>
 
 ## 色の設定方法
 
@@ -155,8 +162,8 @@ canvasのサイズ設定や、最初の背景色など。
     fill(0,255,0);
     
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png" width="400px">
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.pn" width="400px">
-<img src="(https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png" width="400px">
 
 <br>
 <br>
@@ -219,8 +226,7 @@ posX → 変数の名前を決める。posXでもpositionXでもbananaでも何�
 
 先ほどのcircleに変数を使ってみる。
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636506375311_+2021-11-10+10.03.16.png)
-
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636506375311_+2021-11-10+10.03.16.png" width="400px">
 
 
     // 変数の宣言
@@ -281,8 +287,7 @@ draw()の中に書くので1秒間に60回、posXが１ずつ増加します。
     posX = posX+1;
     // posXを1ずつ増加させます。先ほどの上書きの考え方。
 
-
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507162619_draw.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507162619_draw.png" width="400px">
 
 
 
@@ -295,7 +300,8 @@ draw()の中に書くので1秒間に60回、posXが１ずつ増加します。
 
 結果
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507244150_+2021-11-10+10.17.24.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507244150_+2021-11-10+10.17.24.png" width="400px">
+
 
 
 
@@ -309,22 +315,15 @@ draw()の中に書くので1秒間に60回、posXが１ずつ増加します。
 
 しかしこのままでは前のフレームの絵が残ってしまう、、、。
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507486696_+2021-11-10+10.11.28.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507486696_+2021-11-10+10.11.28.png" width="400px">
 
 
 解決策、background()で毎回塗りつぶし、直前の絵をリセットする！
 **高速パラパラ漫画の考え方。**
 黄色い丸　→ 真っ白 → 少し移動した黄色い丸 →　真っ白。
 
-![イメージ。毎回真っ白な画像で塗りつぶす。](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636508259184_parapara.png)
-
-
-
-
-
-
-
-
+イメージ。毎回真っ白な画像で塗りつぶす。
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636508259184_parapara.png" width="400px">
 
 
 
@@ -455,7 +454,11 @@ https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
 
 # ４、簡易ランダムウォークを作ってみよう。
 
-**ランダムウォーク**（[英](https://ja.wikipedia.org/wiki/%E8%8B%B1%E8%AA%9E): random walk）は、次に現れる位置が[確率](https://ja.wikipedia.org/wiki/%E7%A2%BA%E7%8E%87)的に無作為（[ランダム](https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0)）に決定される運動である。
+**ランダムウォーク**（[英](https://ja.wikipedia.org/wiki/%E8%8B%B1%E8%AA%9E): random walk）は、<br>
+次に現れる位置が[確率](https://ja.wikipedia.org/wiki/%E7%A2%BA%E7%8E%87)的に<br>
+無作為（[ランダム](https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0)）に決定される運動である。
+<br>
+<br>
 クリエイティブコーディングの入門によく使われる運動です。
 （この考え方をアレンジした作品にしたり、ウォーカーを増やしたコードにしたり）
 
@@ -500,7 +503,7 @@ randomという新しい命令が登場します。
 
 
 改良すると面白いです。
-
+↓改良した表現
 https://openprocessing.org/sketch/1269818/embed/
 
 
@@ -561,9 +564,7 @@ i++というのはiが１ずつ増加するという意味です。
 
 今回は1度のみの描画が良いのでsetupの方に記述してください。
 drawは空白か消去で大丈夫です。
-
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510705850_+2021-11-10+11.09.29.png)
-
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510705850_+2021-11-10+11.09.29.png" width="400px">
 
 
     function setup(){
@@ -586,10 +587,10 @@ drawは空白か消去で大丈夫です。
 200個にしてみましょう。
 30を200に変更するだけです。一気に結果が変わります。
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510711835_+2021-11-10+11.09.50.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510711835_+2021-11-10+11.09.50.png" width="400px">
 
-
-
+<br>
+<br>
 if文との合わせ技で、前半100回を円に、後半100回を四角にしてみましょう。
 
     
@@ -615,18 +616,23 @@ if文との合わせ技で、前半100回を円に、後半100回を四角にし
     }
 
 
-![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png)
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png" width="400px">
 
 
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510716923_+2021-11-10+11.14.09.png" width="400px">
 
 
-アレンジver
+アレンジver 透明度もランダムに
+<br>
 
 
     fill(R,G,B,A);
     fill(random(255),random(255),random(255),random(255));
     // fillの4番目には透明度が設定可能 0~MAX244
-![透明度もランダムに！](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510816492_+2021-11-10+11.14.42.png)
+    
+    
+
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510816492_+2021-11-10+11.14.42.png" width="400px">
 
 
 
@@ -637,13 +643,14 @@ if文との合わせ技で、前半100回を円に、後半100回を四角にし
 
 
     fill(random(255),random(255),random(255),random(40));
-![透明度もランダムに！（低めに絞る）](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510911704_+2021-11-10+11.15.03.png)
 
+透明度もランダムに！（低めに絞る）
+<br>
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636510911704_+2021-11-10+11.15.03.png" width="400px">
 
-
-
-
-![noStoke()で枠線なしに！](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636511050087_+2021-11-10+11.23.35.png)
+noStoke()で枠線なしに！
+<br>
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636511050087_+2021-11-10+11.23.35.png" width="400px">
 
 
 
@@ -701,8 +708,6 @@ VRやARを作りたい
 
 プログラミング、クリエイティブコーディングに興味を持つきっかけになれば幸いです。
 本日はありがとうございました！
-
-# おまけ（勉強に役立つサイトなど）
 
 
 
