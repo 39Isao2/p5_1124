@@ -77,8 +77,10 @@ https://editor.p5js.org/
 
 ```
 function setup() {
+
   // 横400px 縦400pxのキャンバスを作成する
   createCanvas(400, 400);
+  
   // 背景色を黒にする
   background(0,0,0);
 }
