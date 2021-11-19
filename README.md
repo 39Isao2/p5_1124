@@ -19,20 +19,20 @@
 クリエイティブ・コーディングとは，
 **機能的ではなく表現力**のあるものを創造することを目指すコンピュータプログラミングの一種です。
 (wikipediaより)
-
 https://en.wikipedia.org/wiki/Creative_coding
 
 
 計算やシステム制作ではなく、
-ビジュアルを制作しながらプログラミングを学べるので、そのような種類に抵抗がある方も、楽しんで入門できるかと思います。（個人的にはシステム制作などもとても楽しいし、クリエイティブだと思っております。）
+ビジュアルを制作しながらプログラミングを学べるので、そのような種類に抵抗がある方も、<br>
+楽しんで入門できるかと思います。（個人的にはシステム制作などもとても楽しいし、クリエイティブだと思っております。）<br>
 
-
+↓様々なクリエイティブコーディングの紹介記事<br>
 https://blog.creative-plus.net/archives/8171
 
 <br>
 <br>
 
-# [OpenProcessing](https://openprocessing.org/)
+## [OpenProcessing](https://openprocessing.org/)
 
 p5.jsで制作したスケッチを投稿できるSNSのようなWebサービス。
 
@@ -41,19 +41,23 @@ p5.jsで制作したスケッチを投稿できるSNSのようなWebサービス
 <br>
 <br>
 
-今回はブラウザで動作するコードベースの**「p5.js」**といった環境を使用してプログラミングを学んでいきますが、コードを書かない「ビジュアルプログラミング」といった種類の環境も増えています。
+今回はブラウザで動作するコードベースの **「p5.js」** といった環境を使用してプログラミングを学んでいきますが、<br>
+コードを書かない「ビジュアルプログラミング」といった種類の環境も増えています。<br>
 https://p5js.jp/
 
-
+<br>
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501396688_S28dlBBm.png" width="600px">
 
 <br>
-ビジュアルプログラミング例: **TouchDesigne**r 
+ビジュアルプログラミング例: **TouchDesigner**
 
-ノードベースのビジュアルプログラミング環境。もともとはVJツールだけど、センサー連携などが容易で、インタラクティブ作品やメディアアートに使用されています。
-（あまり詳しくありませんが、、、。）
+ノードベースのビジュアルプログラミング環境。もともとはVJツールだけど、<br>
+センサー連携などが容易で、インタラクティブ作品やメディアアートに使用されています。<br>
+（私はあまり詳しくありませんが、、、。）<br>
 
+公式サイト
 https://derivative.ca/
+<br>
 
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501745894_+2021-11-10+8.46.49.png" width="600px">
 
@@ -62,7 +66,7 @@ https://derivative.ca/
 
 # ２、基礎編の復習、図形の描画。
 
-ではp5の入門しましょう！
+ではp5の入門しましょう！<br>
 p5.jsエディターはこちら。（アカウントを作らないと保存できません。）
 https://editor.p5js.org/
 
@@ -74,22 +78,21 @@ https://editor.p5js.org/
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501958462_S28dlBBm.png" width="600px">
 
 ```
+function setup() {
+  // 横400px 縦400pxのキャンバスを作成する
+  createCanvas(400, 400);
+  // 背景色を黒にする
+  background(0,0,0);
+}
 
-    function setup() {
-      // 横400px 縦400pxのキャンバスを作成する
-      createCanvas(400, 400);
-      // 背景色を黒にする
-      background(0,0,0);
-    }
-    
-    function draw() { 
-     
-      // 赤い色を設定
-      fill(255,0,0);
-    
-      // x座標200、y座標200を中心に直径100pxの円を描く
-      circle(200,200,100);
-    }
+function draw() { 
+
+  // 赤い色を設定
+  fill(255,0,0);
+
+  // x座標200、y座標200を中心に直径100pxの円を描く
+  circle(200,200,100);
+}
  ```
 
 解説
@@ -110,19 +113,25 @@ createCanvas(400, 400);
 ![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636504135270_486.1.jpg)
 
 
-画面はpxという単位のマス目で構成されています。
+画面はpxという単位のマス目で構成されています。 
 ファミコンの初代マリオやドラゴンクエストのドットのイメージです。
 
 
 ![](https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636504147543_486.2.jpg)
 
 
+<br>
+<br>
 
 **setup()の中には、プログラム実行時に一度だけ動作してほしい内容を記述します。**
 canvasのサイズ設定や、最初の背景色など。
 
+<br>
+<br>
 **draw()の中には、プログラム実行時にずっと繰り返し動作してほしい内容を記述します。**
 図形の描画や、座標の更新など。
+<br>
+<br>
 
 <img src="https://paper-attachments.dropbox.com/s_8DDB86368F8E5C60F23520D80858F8BF24655DC9E5F0DFEC033D15D4C5B053EC_1636502258873_+2021-11-10+8.54.10.png" width="600px">
 <br>
@@ -132,8 +141,8 @@ canvasのサイズ設定や、最初の背景色など。
 
 ## 色の設定方法
 
-パソコンのソフトウェアでは、RGBとCMYKという色指定用語が出てきます。
-液晶ディスプレイやデジタルカメラ、Web素材で RGBモード。
+パソコンのソフトウェアでは、RGBとCMYKという色指定用語が出てきます。<br>
+液晶ディスプレイやデジタルカメラ、Web素材で RGBモード。<br>
 プリンターや印刷物などで CMYKモードを使います。
 
 **今回はRGBモード！（加法混色）**
@@ -161,9 +170,9 @@ canvasのサイズ設定や、最初の背景色など。
     // 緑
     fill(0,255,0);
     
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png" width="400px">
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.png" width="400px">
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png" width="500px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.png" width="500px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503638170_+2021-11-10+9.13.38.png" width="500px">
 
 <br>
 <br>
@@ -179,45 +188,46 @@ https://www.lab-nemoto.jp/236/
 
 もう一度（赤い円を描画する）
 ```
-    function setup() {
-      // 横400px 縦400pxのキャンバスを作成する
-      createCanvas(400, 400);
-      // 背景色を黒にする
-      background(0,0,0);
-    }
-    
-    function draw() { 
-     
-      // 赤い色を設定
-      fill(255,0,0);
-    
-      // x座標200、y座標200を中心に直径100pxの円を描く
-      circle(200,200,100);
-    }
+
+function setup() {
+  // 横400px 縦400pxのキャンバスを作成する
+  createCanvas(400, 400);
+  
+  // 背景色を黒にする
+  background(0,0,0);
+}
+
+function draw() { 
+
+  // 赤い色を設定
+  fill(255,0,0);
+
+  // x座標200、y座標200を中心に直径100pxの円を描く
+  circle(200,200,100);
+}
 
 ```
-
-p5.js リファレンス
-https://p5js.org/reference/
+<br>
+<br>
 
 
 
 # ３、変数を使ったアニメーション制作。
 
-簡易アニメーションを制作していきますが、「**変数」**という概念が必要になります。
-<br>
+簡易アニメーションを制作していきますが、**「変数」** という概念が必要になります。
+<br><br>
 <img src="https://paper-attachments.dropbox.com/s_BC39598BCA31FBDCAABBED6C2FA116149B2BF1980745E917C14A95FE598AABEB_1635473368709_let.png" width="300px">
 <br>
 
 ## 変数とは？
 
-その名の通り、変化する数。ですが、数字以外の「文字」やデータでも何でも入ります。
-ひとまず「pcのフォルダにデータを入れる、上書き保存も可能」というような理解でOKです。
-C言語やJavaScript、ほぼ全てのプログラム言語で利用可能な重要な概念です。
+その名の通り、変化する数。ですが、数字以外の「文字」やデータでも何でも入ります。<br>
+ひとまず「pcのフォルダにデータを入れる、上書き保存も可能」というような理解でOKです。<br>
+C言語やJavaScript、ほぼ全てのプログラム言語で利用可能な重要な概念です。<br><br>
 
-let → 変数を使います！という宣言（新しいフォルダを作る）
-posX → 変数の名前を決める。posXでもpositionXでもbananaでも何でもOK（フォルダ名を決める）
-=20 → 値を格納する（代入する）。（フォルダにデータを入れる）
+let → 変数を使います！という宣言（新しいフォルダを作る）<br>
+posX → 変数の名前を決める。posXでもpositionXでもbananaでも何でもOK（フォルダ名を決める）<br>
+=20 → 値を格納する（代入する）。（フォルダにデータを入れる）<br>
 <br>
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636505846856_let.png" width="300px">
 <br>
@@ -225,7 +235,7 @@ posX → 変数の名前を決める。posXでもpositionXでもbananaでも何�
 
 
 先ほどのcircleに変数を使ってみる。
-
+<br>
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636506375311_+2021-11-10+10.03.16.png" width="400px">
 
 
@@ -280,7 +290,7 @@ posX → 変数の名前を決める。posXでもpositionXでもbananaでも何�
     }
 
 
-posXの座標を毎フレーム更新することによってアニメーションが制作できます。
+posXの座標を毎フレーム更新することによってアニメーションが制作できます。<br>
 draw()の中に書くので1秒間に60回、posXが１ずつ増加します。
 
 
@@ -315,39 +325,15 @@ draw()の中に書くので1秒間に60回、posXが１ずつ増加します。
 
 しかしこのままでは前のフレームの絵が残ってしまう、、、。
 
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507486696_+2021-11-10+10.11.28.png" width="400px">
+<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636507486696_+2021-11-10+10.11.28.png" width="600px">
 
 
-解決策、background()で毎回塗りつぶし、直前の絵をリセットする！
+解決策、background()で毎回塗りつぶし、直前の絵をリセットする！<br>
 **高速パラパラ漫画の考え方。**
-黄色い丸　→ 真っ白 → 少し移動した黄色い丸 →　真っ白。
+黄色い丸　→ 真っ白 → 少し移動した黄色い丸 →　真っ白。<br>
 
-イメージ。毎回真っ白な画像で塗りつぶす。
+イメージ。毎回真っ白な画像で塗りつぶす。<br>
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636508259184_parapara.png" width="400px">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -385,21 +371,22 @@ drawの最初にこちらを挿入
       posX = posX+1;
     }
 
-
+<br>
+<br>
 ## アニメーションに条件分岐( if文 )を使ってみる。
-
+<br>
 現状、丸は画面をはみ出すと消えてしまいますが、元に戻るようにしてみましょう。
 そこでif文を使用します。
 if文は「もし〜だったらこういう処理をする」といったように使用する条件分岐に使う命令分です。
-
+<br>
 書き方↓
 
 if (条件) {
     条件を満たしていれば(真であれば)この中の処理を実行する。
 }
 
-今回は、丸が画面右端まで到達したら、また左端に戻したい。
-（posXの座標が画面右端まで到達したらまた元の位置の戻す）
+今回は、丸が画面右端まで到達したら、また左端に戻したい。<br>
+（posXの座標が画面右端まで到達したらまた元の位置の戻す）<br>
 こちらをdrawの最後に記述してあげます。
 
 
@@ -408,12 +395,12 @@ if (条件) {
         posX = 0;
       }
 
-if ( posXが画面右端まで到達という条件を満たしていれば ) {
-    posXを0に戻す。
-}
-
-if-else文、true,falseの概念などもありますが今回は入門なのでここまで。
-
+if ( posXが画面右端まで到達という条件を満たしていれば ) {<br>
+    posXを0に戻す。<br>
+}<br>
+<br>
+if-else文、true,falseの概念などもありますが今回は入門なのでここまで。<br>
+<br>
 https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
 
 
@@ -450,7 +437,7 @@ https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
     }
     
 
-
+<br><br>
 
 # ４、簡易ランダムウォークを作ってみよう。
 
