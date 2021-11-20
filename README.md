@@ -41,13 +41,12 @@ p5.jsで制作したスケッチを投稿できるSNSのようなWebサービス
 
 今回はブラウザで動作するコードベースの **「p5.js」** といった環境を使用してプログラミングを学んでいきますが、<br>
 コードを書かない「ビジュアルプログラミング」といった種類の環境も増えています。<br>
-https://p5js.jp/
 
 <br>
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501396688_S28dlBBm.png" width="600px">
 
 <br>
-ビジュアルプログラミング例: **TouchDesigner**
+ビジュアルプログラミング例: TouchDesigner
 
 ノードベースのビジュアルプログラミング環境。もともとはVJツールだけど、<br>
 センサー連携などが容易で、インタラクティブ作品やメディアアートに使用されています。<br>
