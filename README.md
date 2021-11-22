@@ -493,8 +493,8 @@ randomという新しい命令が登場します。
         circle(posX,posY,5);
     
         // -5以上、5未満のランダムな数字を足してあげる
-        posX += random(-5,5);
-        posY += random(-5,5);
+        posX = posX + random(-5,5);
+        posY = posY + random(-5,5);
     }
 ```
 
