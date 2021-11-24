@@ -72,7 +72,7 @@ https://editor.p5js.org/
 
 ## p5入門!   circleを一つ描く
 
-<img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636501958462_S28dlBBm.png" width="600px">
+<img src="https://www.dropbox.com/scl/fi/oje0t3ocuk9ng7vp1skzr/%E7%AC%AC%E4%B8%80%E5%9B%9E-p5.js%E3%81%A7%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80---Dropbox-Paper.paper?dl=0&rlkey=3zdrj98ep32vpln5e7vtsdxrr.png" width="600px">
 
 ```
 function setup() {
