@@ -399,6 +399,16 @@ if ( posXが画面右端まで到達という条件を満たしていれば ) {
 ```
 
 <br>
+<br>
+そして円の半径分調整してあげます。
+```
+// posXの値が450を超えたら再度0に戻す
+if(posX > 450){
+  posX = -50;
+}
+```
+
+<br>
 if-else文、true,falseの概念などもありますが今回は入門なのでここまでにします。
 ↓if文について<br>
 https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
@@ -429,15 +439,18 @@ https://www.pasonatech.co.jp/workstyle/column/detail.html?p=2619
       // posXの値の更新
       posX = posX + 1;
       
-      // posXの値が400を超えたら再度0に戻す
-      if(posX > 400){
-        posX = 0;
+      // posXの値が450を超えたら再度0に戻す
+      if(posX > 450){
+        posX = -50;
       }
       
     }
     
 
 <br><br>
+
+<br>
+<br>
 
 # ４、簡易ランダムウォークを作ってみよう。
 
