@@ -164,7 +164,8 @@ function draw() {
 それぞれの色要素を0~255で設定します。<br>
 赤・緑・青を全部MAX255に設定すると、白になります。
 
-色の設定（塗りつぶし）にはfill()という命令を使います。
+色の設定（塗りつぶし）にはfill()という命令を使います。<br>
+背景(もしくは全面塗りつぶしにがbackground()と言う命令を使います)<br>
 
     
     fill(R, G, B); // fill(赤の値, 緑の値, 青の値);
@@ -177,6 +178,8 @@ function draw() {
     
     // 緑
     fill(0,255,0);
+    
+    background(R, G, B); // fill(赤の値, 緑の値, 青の値);
     
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503626791_+2021-11-10+9.13.27.png" width="500px">
 <img src="https://paper-attachments.dropbox.com/s_6166EF8E8BBB18B0A325B8E09AF21FEC6FC36D2C135ABFCC6BC61F9A4AE8FD83_1636503647045_+2021-11-10+9.14.55.png" width="500px">
